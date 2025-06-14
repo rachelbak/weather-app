@@ -63,7 +63,7 @@ Open two terminals:
 **First Terminal (Server):**  
 ```sh
 cd server  
-node server.js  
+npm start
 ```
 
 **Second Terminal (Client):**  

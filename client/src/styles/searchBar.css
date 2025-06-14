@@ -1,0 +1,253 @@
+/* עיצוב SEARCHBAR */
+
+/* עיצוב התוכן של ה-search-container */
+
+
+.search-container img {
+  position: absolute;
+  top: 9vh;
+  left: 4vw;
+  width: 7vw;
+  height: 5.6vh;
+  opacity: 1;
+}
+
+/* עיצוב כותרת האתר */
+#title {
+  position: absolute;
+  text-align: left;
+  top: 20.7vh;
+  left: 7.5vw;
+  width: 20.5vw;
+  height: 17.8vh;
+  font: normal normal 300 2.2vw/5.7vh Heebo, sans-serif;
+  letter-spacing: 0px;
+  color: #707070;
+}
+
+/* עיצוב שדה החיפוש */
+label {
+  position: absolute;
+  top: 48.8vh;
+  left: 8.4vw;
+  width: 5.5vw;
+  height: 3.1vh;
+  text-align: left;
+  font: normal normal 300 1.17vw/2.9vh Heebo, sans-serif;
+  letter-spacing: 0px;
+  color: #707070;
+}
+
+/* כפתור CHACK */
+button {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+  top: 54.3vh;
+  left: 31.1vw;
+  width: 6.9vw;
+  height: 4.7vh;
+  background: #046B3B 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  text-align: center;
+  font: normal normal 300 1.3vw/3.5vh Heebo, sans-serif;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  /* transition: background-color 0.3s ease-in-out; */
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  /* background: #03522E; */
+  transform: scale(1.1);
+}
+
+/* הכנסת עיר */
+input {
+  position: absolute;
+  top: 52.5vh;
+  left: 7.5vw;
+  width: 31.5vw;
+  height: 8.2vh;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  border: none;
+  opacity: 1;
+  /* font */
+  text-align: left;
+  font: normal normal normal 1.6vw/4.2vh Heebo, sans-serif;
+  letter-spacing: 0px;
+  color: #363636;
+  opacity: 1;
+
+}
+
+.error {
+  position: absolute;
+  color: red;
+  font: normal normal normal 1vw/4.2vh Heebo, sans-serif;
+  top:60vh;
+  left: 8.4vw;
+}
+
+/* עיצוב תצוגת המיקום */
+.latitude {
+  position: absolute;
+  top: 86.6vh;
+  left: 7.8vw;
+  width: 9vw;
+  height: 2.7vh;
+  text-align: left;
+  font: normal normal 300 1.02vw/2.86vh Heebo;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+.longitude {
+  position: absolute;
+  top: 86.6vh;
+  left: 17vw;
+  width: 9vw;
+  height: 2.7vh;
+  text-align: left;
+  font: normal normal 300 1.02vw/2.86vh Heebo;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+.accurate {
+  position: absolute;
+  top: 89.8vh;
+  left: 7.8vw;
+  width: 14.5vw;
+  height: 2.7vh;
+  text-align: left;
+  font: normal normal 300 1.02vw/2.86vh Heebo;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+
+  /* עיצוב התוכן של ה-search-container */
+  .search-container {
+    width: 70.2vw;
+    height: 83.6vh;
+  }
+
+  .search-container img {
+    width: 14vw;
+    top: 5vh;
+    left: 5vw;
+  }
+
+  #title {
+    text-align: center;
+    top: 19.7vh;
+    left: 30vw;
+    width: 41vw;
+    font: normal normal 300 4.4vw/5.7vh Heebo, sans-serif;
+  }
+
+  label {
+    top: 48.4vh;
+    left: 21.8vw;
+    width: 11.4vw;
+    height: 3.1vh;
+    font: normal normal 300 2.34vw/2.9vh Heebo, sans-serif;
+  }
+
+  button {
+    left: 67.5vw;
+    width: 13.8vw;
+    height: 4.2vh;
+    font: normal normal 300 2.6vw/3.5vh Heebo, sans-serif;
+  }
+
+  input {
+    top: 52.5vh;
+    left: 20vw;
+    width: 63vw;
+    height: 8.2vh;
+    font: normal normal normal 3.2vw/4.2vh Heebo, sans-serif;
+  }
+  .error {
+    left: 23vw;
+    font: normal normal normal 1.7vw/4.2vh Heebo, sans-serif;
+  }
+
+  .latitude {
+    width: 18vw;
+    height: 2.7vh;
+    font: normal normal 300 2.04vw/2.86vh Heebo;
+
+  }
+
+  .longitude {
+    width: 18vw;
+    height: 2.7vh;
+    font: normal normal 300 2.04vw/2.86vh Heebo;
+  }
+
+  .accurate {
+    width: 27vw;
+    height: 2.7vh;
+    font: normal normal 300 2.04vw/2.86vh Heebo;
+  }
+
+  .latitude,
+  .longitude,
+  .accurate {
+    position: static;
+    margin-left: 5vw;
+  }
+
+}
+
+@media (max-width: 470px) {
+  .search-container {
+    height: 57.6vh;
+  }
+
+  .search-container img {
+    top: 3vh;
+    left: 7vw;
+  }
+
+  #title {
+    width: 47vw;
+    font: normal normal 300 5vw/5.7vh Heebo, sans-serif;
+    top: 15vh;
+    left: 28vw;
+  }
+
+
+  label {
+    top: 39.5vh;
+  }
+
+  button {
+    left: 67.5vw;
+    width: 13.8vw;
+    height: 4.35vh;
+    border-radius: 5px;
+    top: 43.5vh;
+    font: normal normal 300 2.6vw/3.5vh Heebo, sans-serif;
+  }
+
+  input {
+    top: 42.5vh;
+    left: 20vw;
+    width: 63vw;
+    height: 6.1vh;
+    /* font */
+    font: normal normal normal 3.2vw/4.4vh Heebo, sans-serif;
+  }
+  .error {
+    top:48vh;
+  }
+}

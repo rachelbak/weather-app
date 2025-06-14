@@ -1,0 +1,13 @@
+/* עיצוב כללי */
+body {
+  background: #F1F1F1;
+  font-family: 'Heebo', sans-serif;
+  overflow: hidden;
+
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: visible;
+  }
+}

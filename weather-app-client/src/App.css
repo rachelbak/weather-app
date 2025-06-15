@@ -1,0 +1,28 @@
+/* עיצוב כללי */
+/* הגדרת משתני CSS גלובליים */
+:root {
+  --primary-color: #046B3B;
+  --primary-hover: #03522E;
+  --secondary-color: #27737D;
+  --background-color: #F1F1F1;
+  --text-color: #707070;
+  --text-dark: #363636;
+  --text-light: #A8C6CB;
+  --text-lightest: #E8F1F2;
+  --error-color: #ff0000;
+  --white: #FFFFFF;
+  --outer-container-bg: #DDE4E6;
+}
+
+/* עיצוב כללי */
+body {
+  background: var(--background-color);
+  font-family: 'Heebo', sans-serif;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: visible;
+  }
+}

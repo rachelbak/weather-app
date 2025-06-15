@@ -7,21 +7,20 @@
     left: 47vw;
     width: 49vw;
     height: 86vh;
-    background: #DDE4E6 0% 0% no-repeat padding-box;
+    background: var(--outer-container-bg);
     border-radius: 4px;
     opacity: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-
 }
 
 /* הקונטיינר הפנימי של מידע מזג האוויר */
 .weather-container {
     width: 31.8vw;
     height: 67vh;
-    background: #27737D 0% 0% no-repeat padding-box;
+    background: var(--secondary-color);
     border-radius: 30px;
     opacity: 1;
     display: flex;
@@ -47,7 +46,7 @@
 /* עיצוב שם העיר */
 .location-info p:first-child {
     font: normal normal normal 1.9vw/3.4vh Heebo;
-    color: #E8F1F2;
+    color: var(--text-lightest);
     margin: 0;
     top: 23vh;
     left: 5vh;
@@ -58,7 +57,7 @@
 /* עיצוב שם המדינה והזמן */
 .location-info p:nth-child(2),
 .location-info p:last-child {
-    color: #A8C6CB;
+    color: var(--text-light);
     margin: 5px 0 0 0;
 }
 
@@ -76,14 +75,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 /* עיצוב של הטמפרטורה */
 .temperature-container p:first-child {
     font: normal normal 500 8.5vw/15.9vh Heebo;
     letter-spacing: -0.7vw;
-    color: #FFFFFF;
+    color: var(--white);
     margin: 0;
     margin-bottom: 0;
 }
@@ -91,7 +89,7 @@
 /* עיצוב של ה-Condition (תיאור מזג האוויר) */
 .temperature-container p:last-child {
     font: normal normal 300 2vw/2vw Heebo;
-    color: #E8F1F2;
+    color: var(--text-lightest);
     margin: 0;
     margin-top: 0;
 }
@@ -109,13 +107,12 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-
 }
 
 /* עיצוב הכותרת של הפרטים */
 .weather-detail p:first-child {
     font: normal normal 300 1.4vw/3.9vh Heebo;
-    color: #E8F1F2;
+    color: var(--text-lightest);
     margin: 0;
     opacity: 1;
 }
@@ -123,7 +120,7 @@
 /* עיצוב הערכים של הפרטים */
 .weather-detail p:last-child {
     font: normal normal 500 1.4vw/3.9vh Heebo;
-    color: #FFFFFF;
+    color: var(--white);
     margin: 0;
     opacity: 1;
 }
@@ -149,7 +146,7 @@
 /* עיצוב השעות */
 .weather-times div p:first-child {
     font: normal normal 300 1.3vw/2.8vh Heebo;
-    color: #A8C6CB;
+    color: var(--text-light);
     text-align: center;
     margin-bottom: 0;
 }
@@ -158,14 +155,14 @@
 .weather-times div p:last-child {
     margin-top: 0;
     font: normal normal 500 1.3vw/2.8vh Heebo;
-    color: #FFFFFF;
+    color: var(--white);
     text-align: center;
 }
 
 /* עיצוב הודעת ברירת מחדל */
 .instructions {
     font: normal normal 500 1.3vw/2.8vh Heebo;
-    color: #707070;
+    color: var(--text-color);
 }
 
 @media (max-width: 768px) {
@@ -210,7 +207,6 @@
     }
 
     .weather-detail p:last-child {
-
         font: normal normal 500 2.8vw/3.9vh Heebo;
     }
 
@@ -232,7 +228,6 @@
     }
 
     .weather-times div p:last-child {
-       
         font: normal normal 500 2.6vw/3vh Heebo;
     }
 }

@@ -1,6 +1,7 @@
+import React from "react";
 import '../styles/weatherCard.css';
 
-const WeatherCard = ({ data, times, formatDateTime }) => {
+const WeatherCard = React.memo(({ data, times, formatDateTime }) => {
 
   return (
     <>
@@ -50,6 +51,6 @@ const WeatherCard = ({ data, times, formatDateTime }) => {
       </div>
     </>
   );
-};
+});
 
 export default WeatherCard;

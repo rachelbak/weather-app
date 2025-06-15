@@ -1,5 +1,5 @@
 import '../styles/searchBar.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { fetchWeather } from '../api/weatherService.js';
 import WeatherCard from "./WeatherCard.jsx"
 
@@ -8,22 +8,35 @@ const SearchBar = () => {
   const [data, setData] = useState(null);
   const [times, setTimes] = useState(null);
   const [errors, setErrors] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setCityInput(e.target.value);
   };
 
-  const handleCheck = (e) => {
+  const handleCheck = async (e) => {
     e.preventDefault();
     setErrors("");
-    fetchWeather(city)
-      .then(res => {
-        setData(res.data);
-        setTimes(res.times);
-      })
-      .catch(err => {
-        console.log(err.message);
-        setErrors("Wrong city name. Please try again.");
-      })
+
+    if (!city.trim()) {
+      setErrors("Please enter a city name");
+      return;
+    }
+
+    setData(null);
+    setTimes(null);
+    setLoading(true);
+
+    try {
+      const res = await fetchWeather(city);
+      setData(res.data);
+      setTimes(res.times);
+      // setCityInput(''); // Uncomment if you want to clear the input after search
+    } catch (err) {
+      setErrors("Wrong city name. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
   const formatDateTime = (dateTime) => {
     const [date, time] = dateTime.split(" ");
@@ -45,23 +58,28 @@ const SearchBar = () => {
             type="text"
             value={city}
             onChange={handleChange}
-            onKeyDown={(e) => e.key === "Enter" && handleCheck(e)}
+            onKeyDown={(e) => e.key === "Enter" && !loading && handleCheck(e)}
             aria-label="City name input"
+            aria-describedby={errors ? "error-message" : undefined}
+            disabled={loading}
           />
-          <button onClick={handleCheck} aria-label="Search for weather">Check</button>
+          <button onClick={handleCheck} disabled={loading} aria-label="Search for weather">Check</button>
         </div>
-        {errors && <p className="error">{errors}</p>}
+        {errors && (
+          <p id="error-message" className="error" role="alert">
+            {errors}
+          </p>
+        )}
       </div>
       <div className="weather">
         <WeatherCard data={data} times={times} formatDateTime={formatDateTime} />
       </div>
       {data && (
         <div className="location-container">
-          <p className="latitude">Latitude {data?.location?.lat ?? "Loading..."}</p>
-          <p className="longitude">Longitude {data?.location?.lon ?? "Loading..."}</p>
+          <p className="latitude">Latitude {data?.location?.lat}</p>
+          <p className="longitude">Longitude {data?.location?.lon}</p>
           <p className="accurate">Accurate to  {data?.current?.last_updated
-            ? formatDateTime(data.current.last_updated)
-            : "Loading..."}</p>
+            ? formatDateTime(data.current.last_updated) : ""}</p>
         </div>
       )}
     </div>

@@ -1,8 +1,5 @@
 /* עיצוב SEARCHBAR */
 
-/* עיצוב התוכן של ה-search-container */
-
-
 .search-container img {
   position: absolute;
   top: 9vh;
@@ -22,7 +19,7 @@
   height: 17.8vh;
   font: normal normal 300 2.2vw/5.7vh Heebo, sans-serif;
   letter-spacing: 0px;
-  color: #707070;
+  color: var(--text-color);
 }
 
 /* עיצוב שדה החיפוש */
@@ -35,10 +32,10 @@ label {
   text-align: left;
   font: normal normal 300 1.17vw/2.9vh Heebo, sans-serif;
   letter-spacing: 0px;
-  color: #707070;
+  color: var(--text-color);
 }
 
-/* כפתור CHACK */
+/* כפתור CHECK */
 button {
   position: absolute;
   border: none;
@@ -48,18 +45,16 @@ button {
   left: 31.1vw;
   width: 6.9vw;
   height: 4.7vh;
-  background: #046B3B 0% 0% no-repeat padding-box;
+  background: var(--primary-color);
   border-radius: 10px;
   text-align: center;
   font: normal normal 300 1.3vw/3.5vh Heebo, sans-serif;
   letter-spacing: 0px;
-  color: #FFFFFF;
-  /* transition: background-color 0.3s ease-in-out; */
+  color: var(--white);
   transition: transform 0.2s ease-in-out;
 }
 
 button:hover {
-  /* background: #03522E; */
   transform: scale(1.1);
 }
 
@@ -70,24 +65,22 @@ input {
   left: 7.5vw;
   width: 31.5vw;
   height: 8.2vh;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  background: var(--white);
   border-radius: 10px;
   border: none;
   opacity: 1;
-  /* font */
   text-align: left;
   font: normal normal normal 1.6vw/4.2vh Heebo, sans-serif;
   letter-spacing: 0px;
-  color: #363636;
+  color: var(--text-dark);
   opacity: 1;
-
 }
 
 .error {
   position: absolute;
-  color: red;
+  color: var(--error-color);
   font: normal normal normal 1vw/4.2vh Heebo, sans-serif;
-  top:60vh;
+  top: 60vh;
   left: 8.4vw;
 }
 
@@ -101,7 +94,7 @@ input {
   text-align: left;
   font: normal normal 300 1.02vw/2.86vh Heebo;
   letter-spacing: 0px;
-  color: #707070;
+  color: var(--text-color);
   opacity: 1;
 }
 
@@ -114,7 +107,7 @@ input {
   text-align: left;
   font: normal normal 300 1.02vw/2.86vh Heebo;
   letter-spacing: 0px;
-  color: #707070;
+  color: var(--text-color);
   opacity: 1;
 }
 
@@ -127,12 +120,11 @@ input {
   text-align: left;
   font: normal normal 300 1.02vw/2.86vh Heebo;
   letter-spacing: 0px;
-  color: #707070;
+  color: var(--text-color);
   opacity: 1;
 }
 
 @media (max-width: 768px) {
-
   /* עיצוב התוכן של ה-search-container */
   .search-container {
     width: 70.2vw;
@@ -175,6 +167,7 @@ input {
     height: 8.2vh;
     font: normal normal normal 3.2vw/4.2vh Heebo, sans-serif;
   }
+
   .error {
     left: 23vw;
     font: normal normal normal 1.7vw/4.2vh Heebo, sans-serif;
@@ -184,7 +177,6 @@ input {
     width: 18vw;
     height: 2.7vh;
     font: normal normal 300 2.04vw/2.86vh Heebo;
-
   }
 
   .longitude {
@@ -205,7 +197,6 @@ input {
     position: static;
     margin-left: 5vw;
   }
-
 }
 
 @media (max-width: 470px) {
@@ -225,7 +216,6 @@ input {
     left: 28vw;
   }
 
-
   label {
     top: 39.5vh;
   }
@@ -244,10 +234,10 @@ input {
     left: 20vw;
     width: 63vw;
     height: 6.1vh;
-    /* font */
     font: normal normal normal 3.2vw/4.4vh Heebo, sans-serif;
   }
+
   .error {
-    top:48vh;
+    top: 48vh;
   }
 }

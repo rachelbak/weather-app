@@ -1,5 +1,5 @@
 
-# 🌤️ Weather App - Client Side
+# 🌤️ weather app - client 
 
 A modern, responsive weather application built with React, featuring a clean and professional design.
 

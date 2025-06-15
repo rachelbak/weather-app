@@ -1,20 +1,30 @@
 import express from "express";
 import cors from "cors"
-//import { fetchWeather } from ".config/api.js";
 import dotenv from "dotenv";
-
 import weatherRouter from "./routes/weatherRoutes.js"
 
 dotenv.config();
+
 const app = express();
+const PORT = process.env.PORT || 8080;
+
 app.use(cors())
 app.use(express.json())
 
 
 app.use("/weather", weatherRouter);
 
-let PORT = process.env.PORT||8080;
+app.use("*", (req, res) => {
+    res.status(404).json({
+        error: "Route not found"
+    });
+});
 
 app.listen(PORT, "localhost", () => {
-    console.log(`app is running on port ${PORT}`)
+    console.log(`Weather server running on port ${PORT}`)
 })
+
+
+
+
+

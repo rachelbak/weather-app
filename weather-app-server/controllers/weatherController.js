@@ -1,12 +1,14 @@
 import { fetchWeather } from "../config/api.js";
 
+// controllers/weatherController.js
 export const getByCity = async (req, res) => {
+   
     const { city } = req.params;
-
+    
     try {
-        const data = await fetchWeather(city);
-        res.json(data);
+        const weatherData = await fetchWeather(city);
+        res.json(weatherData);
     } catch (error) {
-        res.status(400).json({ error: error.message });
+        res.status(500).json({ error: error.message });
     }
 };

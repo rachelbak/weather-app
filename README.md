@@ -1,83 +1,108 @@
-# Weather App ☂️⛅☀️  
+# 🌤️ Weather App - Full Stack Project
 
-## Project Description  
-A real-time weather forecasting app based on the city name.  
-The project is built using **React** on the client-side and **Node.js** on the server-side.  
-The app displays the current weather, upcoming temperature predictions, and a comparison with previous hours.
+A complete weather application built with React frontend and Node.js backend, delivering real-time weather information with a modern, responsive design.
 
-## Technologies  
-- **Frontend:** React, Vite  
-- **Backend:** Node.js, Express  
-- **State Management:** React Hooks  
-- **API:** WeatherAPI  
-- **Request Library:** Axios  
-- **Environment Variables:** dotenv  
-- **CORS:** Enables requests between the server and client-side  
-
-## How to Use?  
-
-### Client-side  
-1. Enter the city name in the text box.  
-2. After submission, the current weather temperature of the requested city will be displayed.  
-3. The app also shows temperatures for the upcoming hour and compares them with previous weather conditions.  
-
-### Server-side  
-The server accepts `GET` requests at the following endpoint:   
+## 🏗️ Project Architecture
 
 ```
-/weather/:city
+weather-app/
+├── 📱 client/          # React Frontend Application
+├── 🚀 server/          # Node.js Backend API
+└── 📋 README.md        # This overview
 ```
 
-Where `city` is the name of the city.  
+## ✨ Key Features
 
-For example, a request for the city **Tel Aviv**:  
+- **🔍 Smart Search** - Fast city search with validation
+- **🌡️ Real-time Data** - Current weather + 5-hour forecast  
+- **📱 Fully Responsive** - Works perfectly on all devices
+- **🎨 Modern Design** - Clean Hebrew interface with Heebo font
+- **⚡ Fast Performance** - Optimized client-server communication
 
-```
-GET /weather/Tel Aviv
-```
+## 🛠️ Tech Stack
 
-## How to Run the Project?  
+| Frontend | Backend |
+|----------|---------|
+| React | Node.js + Express |
+| Axios | WeatherAPI Integration |
+| CSS3 | Advanced Input Validation |
+| Responsive Design | Smart Time Logic |
 
-### 1️⃣ Install Dependencies  
-```sh
-cd client  
-npm install  
+## 🚀 Quick Start
 
-cd ../server  
-npm install  
-```
-
-### 2️⃣ Set up API Keys  
-The project requires an **API Key** to connect to WeatherAPI.  
-
-- Sign up for an account on WeatherAPI.  
-- Add your key to the `.env` file in the server folder:  
-
-```sh
-API_KEY=YOUR_API_KEY
+### 1. Clone Repository
+```bash
+git clone [repository-url]
+cd weather-app
 ```
 
-### 3️⃣ Running the Project  
-Open two terminals:  
-
-**First Terminal (Server):**  
-```sh
-cd server  
-npm start
+### 2. Start Backend
+```bash
+cd server
+npm install
+# Add your WeatherAPI key to .env
+npm start  # Runs on :8080
 ```
 
-**Second Terminal (Client):**  
-```sh
-cd client  
-npm run dev  
+### 3. Start Frontend
+```bash
+cd client
+npm install
+npm run dev  # Runs on :5173
 ```
-## Screenshot
-![Large screen](Screenshot-images/image.png)
 
-![Large screen](Screenshot-images/image-1.png)
+## 📸 Screenshots
 
-![Small screen](Screenshot-images/image-2.png)
+### Desktop View
+![Desktop Screenshot](./screenshots/desktop-view.png)
+*Two-column responsive layout with search panel and weather display*
 
-![Small screen](Screenshot-images/image-3.png)
+### Mobile View
+<img src="./screenshots/mobile-view.png" alt="Mobile Screenshot" width="300">
 
+*Fully responsive mobile interface optimized for touch interaction*
 
+### App Demo
+![App Demo](./screenshots/app-demo.gif)
+*Live demonstration of city search and weather data display*
+
+## 📋 Detailed Documentation
+
+- **[Client Documentation](./client/README.md)** - React app setup, components, styling
+- **[Server Documentation](./server/README.md)** - API endpoints, configuration, deployment
+
+## 🎯 Project Highlights
+
+### Frontend Excellence
+- Modern React architecture with reusable components
+- Pixel-perfect responsive design (Desktop/Tablet/Mobile)
+- Professional Hebrew typography and color scheme
+- Smooth animations and user feedback
+
+### Backend Sophistication  
+- Intelligent hourly forecast logic with edge case handling
+- Robust input validation and error management
+- Clean REST API design
+- Production-ready server configuration
+
+### Full-Stack Integration
+- Seamless client-server communication
+- Consistent error handling across layers
+- Optimized data flow and state management
+
+## 📱 Live Demo
+
+*Search any city and get instant weather data with hourly forecasts*
+
+## 🎓 Learning Outcomes
+
+This project demonstrates:
+- **Full-Stack Development** - Complete application architecture
+- **Modern React** - Hooks, components, responsive design  
+- **Backend APIs** - Express server, external API integration
+- **Production Skills** - Error handling, validation, deployment
+- **UX/UI Design** - Professional interface and user experience
+
+---
+
+💼 **Developed as part of practicum coursework - demonstrating production-ready full-stack development skills**

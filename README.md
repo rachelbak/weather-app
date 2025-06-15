@@ -68,7 +68,7 @@ npm run dev  # Runs on :5173
 
 ## 📋 Detailed Documentation
 
-- **[Client Documentation](./weather-app-client/client/README.md)** - React app setup, components, styling
+- **[Client Documentation](./weather-app-client/README.md)** - React app setup, components, styling
 - **[Server Documentation](./weather-app-server/README.md)** - API endpoints, configuration, deployment
 
 ## 🎯 Project Highlights

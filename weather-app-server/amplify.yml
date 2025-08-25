@@ -1,0 +1,17 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd weather-app-client        # עוברים לתיקייה עם package.json
+        - npm install                  # מתקינים את התלויות
+    build:
+      commands:
+        - npm run build                # מריצים את build של Vite
+  artifacts:
+    baseDirectory: weather-app-client/dist   # תיקיית build של Vite
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - weather-app-client/node_modules/**/*   # שמירת node_modules לזריזות build עתידיות

@@ -5,7 +5,7 @@ const fetchWeather = async (city) => {
         throw new Error("City name is required");
     }
     try {
-        const response = await axios.get(`http://localhost:8080/weather/${city}`);
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/weather/${city}`);
         if (!response.data || !response.data.data) {
             throw new Error("City not found");
         }

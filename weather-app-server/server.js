@@ -20,7 +20,7 @@ app.use("*", (req, res) => {
     });
 });
 
-app.listen(PORT, "localhost", () => {
+app.listen(PORT, "0.0.0.0", () => {
     console.log(`Weather server running on port ${PORT}`)
 })
 

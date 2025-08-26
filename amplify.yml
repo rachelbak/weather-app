@@ -3,15 +3,16 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd weather-app-client        # עוברים לתיקייה עם package.json
-        - npm install                  # מתקינים את התלויות
+        - cd weather-app-client
+        - export VITE_BACKEND_URL=https://16.171.166.210:8080  
+        - npm install
     build:
       commands:
-        - npm run build                # מריצים את build של Vite
+        - npm run build
   artifacts:
-    baseDirectory: weather-app-client/dist   # תיקיית build של Vite
+    baseDirectory: weather-app-client/dist
     files:
       - '**/*'
   cache:
     paths:
-      - weather-app-client/node_modules/**/*   # שמירת node_modules לזריזות build עתידיות
+      - weather-app-client/node_modules/**/*

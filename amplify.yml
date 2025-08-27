@@ -4,7 +4,6 @@ frontend:
     preBuild:
       commands:
         - cd weather-app-client
-        - export VITE_BACKEND_URL=https://16.171.166.210:8080  
         - npm install
     build:
       commands:

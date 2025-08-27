@@ -108,7 +108,8 @@ const updateEdgeHours = (relevantHours, yesterdayTemps, tomorrowTemps) => {
     });
 };
 
-// הפונקציה הראשית - עכשיו הרבה יותר פשוטה!
+
+//הפונקציה הראשית
 export const fetchWeather = async (city) => {
     checkInput(city);
 
@@ -129,7 +130,10 @@ export const fetchWeather = async (city) => {
         const tomorrowTemps = await getTomorrowTemps(city, currentHour);
 
         updateEdgeHours(relevantHours, yesterdayTemps, tomorrowTemps);
-
+        console.log({
+            data: response.data,
+            times: relevantHours
+        });
         return {
             data: response.data,
             times: relevantHours

@@ -104,5 +104,3 @@ This project demonstrates:
 - **UX/UI Design** - Professional interface and user experience
 
 ---
-
-💼 **Developed as part of practicum coursework - demonstrating production-ready full-stack development skills**
